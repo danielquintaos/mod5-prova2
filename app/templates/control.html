@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Ping</h2>
+<form method="GET" hx-get="/ping" hx-target="#ping-status" hx-swap="outerHTML">
+    <button type="submit">Ping</button>
+</form>
+<div id="ping-status"></div>
+
+<h2>Echo</h2>
+<form method="POST" hx-post="/echo" hx-target="#echo-status" hx-swap="outerHTML">
+    <label for="echo-data">Data:</label>
+    <input type="text" id="echo-data" name="dados" required>
+    <button type="submit">Send Data</button>
+</form>
+<div id="echo-status"></div>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROVA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/dash">Log Dashboard</a></li>
+            <li><a href="/ping">Ping</a></li>
+            <li><a href="/echo">Echo</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
